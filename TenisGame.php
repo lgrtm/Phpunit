@@ -10,7 +10,9 @@ class TennisGameTest extends PhpUnit_Framework_TestCase {
 	const MIN_POINTS_TO_WIN = 4;
 
 	public function testLeftPlayerScores() {
+		// Act
 		$this->leftScore++;
+		// Assert
 		$this->assertNotNull('leftScore'); // -> contiene un valor
 		//15-30-40-W -> equivale a 1-2-3-4 puntuacion del playerl left
 		//cada vez que llamemos a esta función puntua el player left
@@ -19,7 +21,9 @@ class TennisGameTest extends PhpUnit_Framework_TestCase {
 	}	
 
 	public function testRightPlayerScores() {
+		// Act
 		$this->rightScore++;
+		// Assert
 		$this->assertNotNull('rightScore'); // -> contiene un valor
 		//15-30-40-W -> equivale a 1-2-3-4 puntuacion del playerl right
 		//cada vez que llamemos a esta función puntua el player right
