@@ -1,5 +1,6 @@
 <?php
-
+// Sabemos que no tenemos que utilizar comentarios o excepcionalmente
+// pero esta primera vez vamos hacer una excepcion :P
 // Definimos los dos jugadores 
 
 class TennisGameTest extends PhpUnit_Framework_TestCase {
@@ -27,5 +28,18 @@ class TennisGameTest extends PhpUnit_Framework_TestCase {
 		$this->assertNotNull('rightScore'); // -> contiene un valor
 		//15-30-40-W -> equivale a 1-2-3-4 puntuacion del playerl right
 		//cada vez que llamemos a esta función puntua el player right
+	}
+
+
+	// Ahora dejamos las funciones preparadas para 
+	// empezar el SUT del gameTest
+	// son necesarias para pasar los test !!!
+
+	public function LeftPlayerScores() {
+		$this->leftScore++;
+	}	
+
+	public function RightPlayerScores() {
+		$this->rightScore++;
 	}	
 }
